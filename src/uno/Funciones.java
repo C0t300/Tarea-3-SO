@@ -1,19 +1,30 @@
 package uno;
-import java.util.Hashtable;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Funciones {
 	
-	Hashtable<String, String> funciones = new Hashtable<>(); 
+	List<Funcion> funciones = new ArrayList<>();
 	
-	public void setFunciones(List<String> f) {
+	public Funciones(List<String> f) {
 		for (String fu : f) {
 			String[] buf = fu.split("=");
-			funciones.put(buf[0], buf[1]);
+			Funcion nuevo = new Funcion(buf[0], buf[1]);
+			funciones.add(nuevo);
 		}
 	}
+	
+	public Funcion getFunct(String f) {
+		for (Funcion actual : this.funciones) {
+			if(actual.nombre.equals(f)) {
+				return actual;
+			}
+		}
+		System.out.println("No existe la funcion" + f);
+		return null;
+	}
+	
+	//public boolean tieneFuncionesInternas()
 	
 	
 	
