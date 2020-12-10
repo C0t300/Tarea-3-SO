@@ -10,17 +10,17 @@ public class Archivo {
 		try {
 			List<String> retorno = new ArrayList<>();
 			File myObj = new File("/home/c0t300/git/Tarea-3-SO/Tarea-3-SO/data/text.txt");
-			Scanner myReader = new Scanner(myObj);
+			Scanner escaner = new Scanner(myObj);
 			int cantFunciones = 0;
-			if(myReader.hasNextLine()) {
-				String primero = myReader.nextLine();
+			if(escaner.hasNextLine()) {
+				String primero = escaner.nextLine();
 				cantFunciones = Integer.parseInt(primero);
 			}
 			int i;
 			for(i = 0; i < cantFunciones; i++) {
-				retorno.add(myReader.nextLine());
+				retorno.add(escaner.nextLine());
 			}
-			myReader.close();
+			escaner.close();
 			return retorno;
 	    	} catch (FileNotFoundException e) {
 	    		System.out.println("An error occurred.");

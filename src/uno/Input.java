@@ -1,13 +1,16 @@
 package uno;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Input {
 	
 	String funct = "";
 	int x = 0;
+	
+	public Input(String f, int a) {
+		this.funct = f;
+		this.x = a;
+	}
 	
 	public void getInput() {
 		Scanner sc = new Scanner(System.in);
@@ -16,5 +19,6 @@ public class Input {
 		numbers = numbers.replaceAll("\\s+","");
 		this.x = Integer.parseInt(numbers);
 		this.funct = str.charAt(0) + "(x)";
+		sc.close();
 	}
 }

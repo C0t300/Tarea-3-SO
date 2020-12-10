@@ -1,18 +1,23 @@
 package uno;
 
 public class Main {
+	
 
 	public static void main(String[] args) {
 		Funciones f = new Funciones(Archivo.leer());
 		System.out.println("Funciones ingresadas.");
 		
-		Input in = new Input();
+		Input in = new Input("", 0);
 		in.getInput();
-		Funcion actual = f.getFunct(in.funct);
-		if(!actual.tieneFuncionesInternas()) {
-			String buf = actual.expresion.replace("x", Integer.toString(in.x));
-			System.out.println(Evaluar.funcion(buf));
+		
+		Evaluar ev1 = new Evaluar(f, in);
+		
+		synchronized(ev1) {
+			ev1.run();
 		}
+		System.out.println(ev1.resultado);
+		System.out.println("finish.");
+		
 
 	}
 	
