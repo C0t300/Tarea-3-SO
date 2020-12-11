@@ -5,7 +5,7 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) {
-		int n = 100000000;
+		int n = 400000;
 		int maxNumber = 100;
 		boolean showArrays = false;
 		List<Integer> desorden = RandomArray.randArray(n, maxNumber);
