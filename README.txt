@@ -3,10 +3,22 @@ Tarea-3-SO
 José Runín
 201873553-1
 
+Ignacio Riffo
+
+
 Importante:
-	-Correr con JDK 8, pero setear el ompiler compliance level de eclipse a 1.8. No logre compilarlo fuera de eclipse.
+	-Correr con JDK 11.
+	
+Como correr:
+	make uno -> corre el problema uno, con el archivo llamado "text.txt"
+	ubicado en el directorio data.
+	
+	make dos -> corre el problema dos.
+	
+	make cleanuno | make cleandos -> limpia los .class de los directorios.
   
 Problema 2:
+	DISCLAIMER: Todos estos benchmarks fueron hechos con eclipse.
 	Mientras mas grande el n que se le entrea al "creador de arrays", mayor es la diferencia.
 	Con:
 		int n = 100000000;

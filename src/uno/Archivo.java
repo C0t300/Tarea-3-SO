@@ -9,7 +9,7 @@ public class Archivo {
 	public static List<String> leer() {
 		try {
 			List<String> retorno = new ArrayList<>();
-			File myObj = new File("data/text.txt");
+			File myObj = new File("../data/text.txt");
 			Scanner escaner = new Scanner(myObj);
 			int cantFunciones = 0;
 			if(escaner.hasNextLine()) {
