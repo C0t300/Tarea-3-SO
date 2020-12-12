@@ -4,7 +4,7 @@ José Runín
 201873553-1
 
 Importante:
-	-Correr con JDK 8
+	-Correr con JDK 8, pero setear el ompiler compliance level de eclipse a 1.8. No logre compilarlo fuera de eclipse.
   
 Problema 2:
 	Mientras mas grande el n que se le entrea al "creador de arrays", mayor es la diferencia.
